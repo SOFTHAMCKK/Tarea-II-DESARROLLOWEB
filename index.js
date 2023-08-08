@@ -5,19 +5,19 @@ const manipularArreglo = (arreglo, accion, elemento) => {
     } else if (accion === "eliminar") {
       arreglo.pop();
     }
-    
+    return arreglo;
   };
   
   // Función 2: Sin return y tomando dos parámetros
-  const mostrarSaludo = (nombrePersona1, nombrePersona2) => {
-    console.log(`¡Hola ${nombrePersona1} y ${nombrePersona2}!`);
+  const mostrarSaludo = (array) => {
+    console.log(`¡Hola ${array} !`);
   };
+  
   
   // Función 3: Callback function
   const funcionCallback = (funcionManipulacion, funcionSaludo) => {
     const nombres = ["Juan", "María"];
-    funcionManipulacion(nombres, "agregar", "Pedro");
-    funcionSaludo("Ana", "Luis");
+    funcionSaludo(funcionManipulacion(nombres, "agregar", "Pedro"));
   };
   
   // Usar la función callback con las dos funciones anteriores
