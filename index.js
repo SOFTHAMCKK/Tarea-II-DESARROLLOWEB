@@ -3,7 +3,7 @@ const manipularArreglo = (arreglo, accion, elemento) => {
     if (accion === "agregar") {
       arreglo.push(elemento);
     } else if (accion === "eliminar") {
-      arreglo.pop(elemento);
+      arreglo.pop();
     }
     return arreglo;
   };
